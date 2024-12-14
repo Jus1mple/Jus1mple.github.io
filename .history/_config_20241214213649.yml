@@ -21,7 +21,7 @@ repository               : "Jus1mple/Jus1mple.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "personal_photo.png"
+  avatar           : "./pic/personal_photo.png"
   name             : "Kedong Xiu (修可栋)"
   pronouns         : "He/Him" # example: "she/her"  
   bio              : "Initial researcher in AI & Security"
