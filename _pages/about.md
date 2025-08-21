@@ -18,7 +18,7 @@ Currently, I am interested in the following topics:
 * Agent Security
 * Inversion Attack
 
-I used to working on **Password Security**, maybe in some uncertain future, I could still do some work about this topic. LOL 😎😎😎
+My earlier research focused on  **Password Security** , a topic I may revisit in the future as part of my broader interests. 😎😎😎
 
 
 
