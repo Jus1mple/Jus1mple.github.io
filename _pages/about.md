@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I am Kedong Xiu, a first-year Ph.D student at Zhejiang University. I am fortuned to be co-advised by Prof. Tianhang Zheng and Prof. Kui Ren. 
+I am Kedong Xiu, a first-year Ph.D student at Zhejiang University, fortunate to be co-advised by Prof. Tianhang Zheng and Prof. Kui Ren.
 
 My research focuses on the intersection of **Large Language Models (LLMs)**, **Multimodal Large Language Models (MLLMs)**, and **Cybersecurity**, aiming to build trustworthy and robust AI systems.
 
