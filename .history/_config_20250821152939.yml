@@ -24,9 +24,9 @@ author:
   # Biographic information
   avatar           : "my_profile.png"
   name             : "Kedong Xiu"
-  pronouns         : "he/him"
+  pronouns         : # example: "she/her"  
   bio              : "Work hard, Play hard! Enjoy the world!"
-  location         : "Hangzhou, Zhejiang, China"
+  location         : "Hangzhou, China"
   employer         : "Zhejiang University"
   uri              : # URL
   email            : "kedongxiu@zju.edu.cn" 
