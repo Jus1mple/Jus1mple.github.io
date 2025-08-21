@@ -37,13 +37,13 @@ My earlier research focused on  **Password Security** , a topic I may revisit in
 
 # Publications
 
-($^\dagger$ represents equal contribution)
+(\\(^\dagger\\) represents equal contribution)
 
 [Google Scholar](https://scholar.google.com/citations?user=yjn-6QkAAAAJ)
 
 * **[LLM Security] DualBreach:  Efficient Dual-Jailbreaking via Target-Driven Initialization and Multi-Target Optimization**
 
-    *Xinzhe Huang$^\dagger$, Kedong Xiu$^\dagger$, Tianhang Zheng, Churui Zeng, Wangze Ni, Zhan Qin, Kui Ren, Chun Chen*
+    *Xinzhe Huang\\(^\dagger\\), Kedong Xiu\\(^\dagger\\), Tianhang Zheng, Churui Zeng, Wangze Ni, Zhan Qin, Kui Ren, Chun Chen*
 
     NDSS 2026
 
