@@ -29,39 +29,36 @@ My earlier research focused on  **Password Security** , a topic I may revisit in
 ---
 
 # Preprints
+
 1. **[LLM Security] Dynamic Target Attack**
-
 2. **[LLM Security] Untargeted Jailbreak Attack**
-
 3. **[LLM Security] HarmMetric Eval: Benchmarking Metrics and Judges for LLM Harmfulness Assessment**
-
 
 # Publications
 
 (\\(^\dagger\\) represents equal contribution)
-<sup>&dagger;</sup>Denotes equal contribution.
+`<sup>`&dagger;`</sup>`Denotes equal contribution.
 
 [Google Scholar](https://scholar.google.com/citations?user=yjn-6QkAAAAJ)
 
-1. **[LLM Security] DualBreach:  Efficient Dual-Jailbreaking via Target-Driven Initialization and Multi-Target Optimization**
+**[LLM Security] DualBreach:  Efficient Dual-Jailbreaking via Target-Driven Initialization and Multi-Target Optimization**
 
-  - Xinzhe Huang<sup>&dagger;</sup>, **Kedong Xiu**<sup>&dagger;</sup>, Tianhang Zheng, Churui Zeng, Wangze Ni, Zhan Qin, Kui Ren, Chun Chen
-  - Venue: [*NDSS 2026*](https://www.ndss-symposium.org/ndss2026/)
-  - Paper: \[[arXiv](https://arxiv.org/abs/2504.18564)\]
-  - Repo: \[[GitHub](https://github.com/hxz-sec/DualBreach)\]
+> - Xinzhe Huang`<sup>`&dagger;`</sup>`, **Kedong Xiu**`<sup>`&dagger;`</sup>`, Tianhang Zheng, Churui Zeng, Wangze Ni, Zhan Qin, Kui Ren, Chun Chen
+> - Venue: [*NDSS 2026*](https://www.ndss-symposium.org/ndss2026/)
+> - Paper: \[[arXiv](https://arxiv.org/abs/2504.18564)\]
+> - Repo: \[[GitHub](https://github.com/hxz-sec/DualBreach)\]
 
-2. **[VLM Security] CapRecover: A Cross-Modality Feature Inversion Attack Framework on Vision Language Models**
+**[VLM Security] CapRecover: A Cross-Modality Feature Inversion Attack Framework on Vision Language Models**
 
-  - _Kedong Xiu and Sai Qian Zhang_
-  - ACM MM 2025
+  $\qquad$ - _Kedong Xiu and Sai Qian Zhang_
+  $\qquad$ - ACM MM 2025
 
-3. **[Password Security] PointerGuess: Targeted Password Guessing Model Using Pointer Mechanism**
+**[Password Security] PointerGuess: Targeted Password Guessing Model Using Pointer Mechanism**
 
-  - _Kedong Xiu, Ding Wang_
-  - USENIX Security 2024
+- _Kedong Xiu, Ding Wang_
+- USENIX Security 2024
 
-4. **[Password Security] Password Guessing using Random Forest**
+**[Password Security] Password Guessing using Random Forest**
 
-  - _Ding Wang, Yunkai Zou, Zijian Zhang, Kedong Xiu_
-
-  - USENIX Security 2023
+- _Ding Wang, Yunkai Zou, Zijian Zhang, Kedong Xiu_
+- USENIX Security 2023
