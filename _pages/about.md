@@ -56,17 +56,17 @@ My earlier research focused on  **Password Security** , a topic I may revisit in
 
 **[LLM Security] DualBreach:  Efficient Dual-Jailbreaking via Target-Driven Initialization and Multi-Target Optimization**
 
-  > Authors: Xinzhe Huang<sup>&dagger;</sup>, **Kedong Xiu**<sup>&dagger;</sup>, Tianhang Zheng, Churui Zeng, Wangze Ni, Zhan Qin, Kui Ren, Chun Chen<br>
-  > Venue: [*NDSS 2026*](https://www.ndss-symposium.org/ndss2026/)<br>
-  > Paper: \[[arXiv](https://arxiv.org/abs/2504.18564)\]<br>
-  > Repo: \[[GitHub](https://github.com/hxz-sec/DualBreach)\]<br>
+    > Authors: Xinzhe Huang<sup>&dagger;</sup>, **Kedong Xiu**<sup>&dagger;</sup>, Tianhang Zheng, Churui Zeng, Wangze Ni, Zhan Qin, Kui Ren, Chun Chen
+    Venue: [*NDSS 2026*](https://www.ndss-symposium.org/ndss2026/)
+    Paper: \[[arXiv](https://arxiv.org/abs/2504.18564)\]
+    Repo: \[[GitHub](https://github.com/hxz-sec/DualBreach)\]
 
 **[VLM Security] CapRecover: A Cross-Modality Feature Inversion Attack Framework on Vision Language Models**
 
-  > Authors: **Kedong Xiu** and Sai Qian Zhang<br>
-  > Venue: ACM Multimedia (MM) 2025<br>
-  > Paper: \[[arXiv](https://arxiv.org/abs/2507.22828)\]<br>
-  > Repo: _TBD_<br>
+    > Authors: **Kedong Xiu** and Sai Qian Zhang<br>
+    > Venue: ACM Multimedia (MM) 2025<br>
+    > Paper: \[[arXiv](https://arxiv.org/abs/2507.22828)\]<br>
+    > Repo: _TBD_<br>
 
 **[Password Security] PointerGuess: Targeted Password Guessing Model Using Pointer Mechanism**
 
