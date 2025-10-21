@@ -33,9 +33,9 @@ My earlier research focused on  **Password Security** , a topic I may revisit in
 (<sup>&dagger;</sup>Denotes equal contribution.)
 
 - **[LLM Security] Dynamic Target Attack**
-    > Authors: **Kedong Xiu**, Churui Zeng, Tianhang Zheng, Xinzhe Huang, Xiaojun Jia, Di Wang, Puning Zhao, Zhan Qin, Kui Ren<br>
-    > Paper: \[[arXiv](https://arxiv.org/abs/2510.02422)\]<br>
-    > Repo: \[[GitHub](https://github.com/AIsec-ke/Dynamic-Target-Attack)\]<br>
+    > <span style="font-style: normal;">Authors:</span> **Kedong Xiu**, Churui Zeng, Tianhang Zheng, Xinzhe Huang, Xiaojun Jia, Di Wang, Puning Zhao, Zhan Qin, Kui Ren<br>
+    > <span style="font-style: normal;">Paper:</span> \[[arXiv](https://arxiv.org/abs/2510.02422)\]<br>
+    > <span style="font-style: normal;">Repo:</span> \[[GitHub](https://github.com/AIsec-ke/Dynamic-Target-Attack)\]<br>
 
 - **[LLM Security] Untargeted Jailbreak Attack**
     > Authors: Xinzhe Huang, Wenjing Hu, Tianhang Zheng, **Kedong Xiu**, Xiaojun Jia, Di Wang, Zhan Qin, Kui Ren<br>
