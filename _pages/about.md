@@ -39,19 +39,20 @@ My earlier research focused on  **Password Security** , a topic I may revisit in
 # Publications
 
 (\\(^\dagger\\) represents equal contribution)
+<sup>&dagger;</sup>Denotes equal contribution.
 
 [Google Scholar](https://scholar.google.com/citations?user=yjn-6QkAAAAJ)
 
 1. **[LLM Security] DualBreach:  Efficient Dual-Jailbreaking via Target-Driven Initialization and Multi-Target Optimization**
 
-  > Authors: _Xinzhe Huang\\(^\dagger\\), Kedong Xiu\\(^\dagger\\), Tianhang Zheng, Churui Zeng, Wangze Ni, Zhan Qin, Kui Ren, Chun Chen_<br>
-  > Venue: NDSS 2026<br>
-  > Paper: [arXiv](https://arxiv.org/abs/2504.18564)<br>
-  > Project: [DualBreach](https://github.com/hxz-sec/DualBreach)<br>
+  &emsp;<br>Xinzhe Huang<sup>&dagger;</sup>, **Kedong Xiu**<sup>&dagger;</sup>, Tianhang Zheng, Churui Zeng, Wangze Ni, Zhan Qin, Kui Ren, Chun Chen
+  &emsp;<br>Venue: [*NDSS 2026*](https://www.ndss-symposium.org/ndss2026/)
+  &emsp;<br>Paper: \[[arXiv](https://arxiv.org/abs/2504.18564)\]
+  &emsp;<br>Repo: \[[GitHub](https://github.com/hxz-sec/DualBreach)\]
 
 2. **[VLM Security] CapRecover: A Cross-Modality Feature Inversion Attack Framework on Vision Language Models**
 
-  _Kedong Xiu, Sai Qian Zhang_
+  _Kedong Xiu and Sai Qian Zhang_
 
   ACM MM 2025
 
