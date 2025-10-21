@@ -45,7 +45,7 @@ My earlier research focused on  **Password Security** , a topic I may revisit in
 
 1. **[LLM Security] DualBreach:  Efficient Dual-Jailbreaking via Target-Driven Initialization and Multi-Target Optimization**
 
-  &emsp;<br>Xinzhe Huang<sup>&dagger;</sup>, **Kedong Xiu**<sup>&dagger;</sup>, Tianhang Zheng, Churui Zeng, Wangze Ni, Zhan Qin, Kui Ren, Chun Chen
+  &emsp;&emsp;&emsp;&emsp;<br>Xinzhe Huang<sup>&dagger;</sup>, **Kedong Xiu**<sup>&dagger;</sup>, Tianhang Zheng, Churui Zeng, Wangze Ni, Zhan Qin, Kui Ren, Chun Chen
   &emsp;<br>Venue: [*NDSS 2026*](https://www.ndss-symposium.org/ndss2026/)
   &emsp;<br>Paper: \[[arXiv](https://arxiv.org/abs/2504.18564)\]
   &emsp;<br>Repo: \[[GitHub](https://github.com/hxz-sec/DualBreach)\]
