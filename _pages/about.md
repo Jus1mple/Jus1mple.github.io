@@ -33,9 +33,9 @@ My earlier research focused on  **Password Security** , a topic I may revisit in
 (<sup>&dagger;</sup>Denotes equal contribution.)
 
 - **[LLM Security] Dynamic Target Attack**
-    > <span style="font-style: normal;">Authors:</span> **Kedong Xiu**, Churui Zeng, Tianhang Zheng, Xinzhe Huang, Xiaojun Jia, Di Wang, Puning Zhao, Zhan Qin, Kui Ren<br>
-    > <span style="font-style: normal;">Paper:</span> \[[arXiv](https://arxiv.org/abs/2510.02422)\]<br>
-    > <span style="font-style: normal;">Repo:</span> \[[GitHub](https://github.com/AIsec-ke/Dynamic-Target-Attack)\]<br>
+    > Authors: **Kedong Xiu**, Churui Zeng, Tianhang Zheng, Xinzhe Huang, Xiaojun Jia, Di Wang, Puning Zhao, Zhan Qin, Kui Ren<br>
+    > Paper: \[[arXiv](https://arxiv.org/abs/2510.02422)\]<br>
+    > Repo: \[[GitHub](https://github.com/AIsec-ke/Dynamic-Target-Attack)\]<br>
 
 - **[LLM Security] Untargeted Jailbreak Attack**
     > Authors: Xinzhe Huang, Wenjing Hu, Tianhang Zheng, **Kedong Xiu**, Xiaojun Jia, Di Wang, Zhan Qin, Kui Ren<br>
@@ -57,7 +57,7 @@ My earlier research focused on  **Password Security** , a topic I may revisit in
 - **[LLM Security] DualBreach:  Efficient Dual-Jailbreaking via Target-Driven Initialization and Multi-Target Optimization**
 
     > Authors: Xinzhe Huang<sup>&dagger;</sup>, **Kedong Xiu**<sup>&dagger;</sup>, Tianhang Zheng, Churui Zeng, Wangze Ni, Zhan Qin, Kui Ren, Chun Chen<br>
-    > Venue: [*NDSS 2026*](https://www.ndss-symposium.org/ndss2026/)<br>
+    > Venue: [*NDSS 2026*](https://www.ndss-symposium.org/ndss2026/)<br> (<span style="color:red;">Security BIG4</span>)
     > Paper: \[[arXiv](https://arxiv.org/abs/2504.18564)\]<br>
     > Repo: \[[GitHub](https://github.com/hxz-sec/DualBreach)\]<br>
 
