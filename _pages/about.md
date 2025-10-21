@@ -6,7 +6,6 @@ redirect_from:
   - /about/
   - /about.html
 ---
-
 I am Kedong Xiu, a first-year Ph.D student at Zhejiang University, fortunate to be co-advised by Prof. Tianhang Zheng and Prof. Kui Ren.
 
 My research focuses on the intersection of **Large Language Models (LLMs)**, **Multimodal Large Language Models (MLLMs)**, and **Cybersecurity**, aiming to build trustworthy and robust AI systems.
@@ -15,24 +14,26 @@ Currently, I am interested in the following topics:
 
 * Jailbreaking
 * Alignment
-* Agent Security
 * Inversion Attack
+* Agent Security
 
 My earlier research focused on  **Password Security** , a topic I may revisit in the future as part of my broader interests. 😎😎😎
 
+---
+
+# News
+
+* [2025/08] 🎉🎉 One paper is accepted by Network and Distributed System Security (NDSS) Symposium 2026!
+* [2025/07] 🎉🎉 One paper is accepted by ACM Multimedia (MM) 2025! This work completes when I was a remote intern at New York University advised by Prof. [Sai Qian Zhang](https://saiqianzhang.com/).
 
 ---
 
+# Preprints
+1. **[LLM Security] Dynamic Target Attack**
 
+2. **[LLM Security] Untargeted Jailbreak Attack**
 
-# News🎉
-
-* [2025/08] Our paper title "DualBreach:  Efficient Dual-Jailbreaking via Target-Driven Initialization and Multi-Target Optimization" got accepted by Network and Distributed System Security (NDSS) Symposium 2026!
-* [2025/07] Our paper titled "CapRecover: A Cross-Modality Feature Inversion Attack Framework on Vision Language Models" got accepted by ACM Multimedia (MM) 2025! This work completes when I was a remote intern at NewYork University advised by Prof. Sai Qian Zhang.
-
-
----
-
+3. **[LLM Security] HarmMetric Eval: Benchmarking Metrics and Judges for LLM Harmfulness Assessment**
 
 
 # Publications
@@ -41,26 +42,26 @@ My earlier research focused on  **Password Security** , a topic I may revisit in
 
 [Google Scholar](https://scholar.google.com/citations?user=yjn-6QkAAAAJ)
 
-* **[LLM Security] DualBreach:  Efficient Dual-Jailbreaking via Target-Driven Initialization and Multi-Target Optimization**
+1. **[LLM Security] DualBreach:  Efficient Dual-Jailbreaking via Target-Driven Initialization and Multi-Target Optimization**
 
-    *Xinzhe Huang\\(^\dagger\\), Kedong Xiu\\(^\dagger\\), Tianhang Zheng, Churui Zeng, Wangze Ni, Zhan Qin, Kui Ren, Chun Chen*
+  > Authors: _Xinzhe Huang\\(^\dagger\\), Kedong Xiu\\(^\dagger\\), Tianhang Zheng, Churui Zeng, Wangze Ni, Zhan Qin, Kui Ren, Chun Chen_<br>
+  > Venue: NDSS 2026<br>
+  > Paper: [arXiv](https://arxiv.org/abs/2504.18564)<br>
+  > Project: [DualBreach](https://github.com/hxz-sec/DualBreach)<br>
 
-    NDSS 2026
+2. **[VLM Security] CapRecover: A Cross-Modality Feature Inversion Attack Framework on Vision Language Models**
 
-* **[VLM Security] CapRecover: A Cross-Modality Feature Inversion Attack Framework on Vision Language Models**
+  _Kedong Xiu, Sai Qian Zhang_
 
-    *Kedong Xiu, Sai Qian Zhang*
+  ACM MM 2025
 
-    ACM MM 2025
+3. **[Password Security] PointerGuess: Targeted Password Guessing Model Using Pointer Mechanism**
 
-* **[Password Security] PointerGuess: Targeted Password Guessing Model Using Pointer Mechanism**
+  _Kedong Xiu, Ding Wang_
 
-    *Kedong Xiu, Ding Wang*
+  USENIX Security 2024
+4. **[Password Security] Password Guessing using Random Forest**
 
-    USENIX Security 2024
+  _Ding Wang, Yunkai Zou, Zijian Zhang, Kedong Xiu_
 
-* **[Password Security] Password Guessing using Random Forest**
-
-    *Ding Wang, Yunkai Zou, Zijian Zhang, Kedong Xiu*
-
-    USENIX Security 2023
+  USENIX Security 2023
