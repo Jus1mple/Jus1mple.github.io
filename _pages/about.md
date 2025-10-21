@@ -30,15 +30,22 @@ My earlier research focused on  **Password Security** , a topic I may revisit in
 
 # Preprints
 
+(<sup>&dagger;</sup>Denotes equal contribution.)
+
 **[LLM Security] Dynamic Target Attack**
   > Authors: **Kedong Xiu**, Churui Zeng, Tianhang Zheng, Xinzhe Huang, Xiaojun Jia, Di Wang, Puning Zhao, Zhan Qin, Kui Ren<br>
   > Paper: \[[arXiv](https://arxiv.org/abs/2510.02422)\]<br>
-  > Repo: _TBD_<br>
+  > Repo: \[[GitHub](https://github.com/AIsec-ke/Dynamic-Target-Attack)\]<br>
 
 **[LLM Security] Untargeted Jailbreak Attack**
+  > Authors: Xinzhe Huang, Wenjing Hu, Tianhang Zheng, **Kedong Xiu**, Xiaojun Jia, Di Wang, Zhan Qin, Kui Ren<br>
+  > Paper: \[[arXiv](https://arxiv.org/abs/2510.02999)\]<br>
+  > Repo: \[[GitHub](https://github.com/hxz-sec/Untargeted-Jailbreak-Attack)\]<br>
 
 **[LLM Security] HarmMetric Eval: Benchmarking Metrics and Judges for LLM Harmfulness Assessment**
-
+  > Authors: Langqi Yang, Tianhang Zheng, **Kedong Xiu**, Yixuan Chen, Di Wang, Puning Zhao, Zhan Qin, Kui Ren<br>
+  > Paper: \[[arXiv](https://arxiv.org/abs/2509.24384)\]<br>
+  > Repo: \[[GitHub](https://github.com/Qusgo/HarmMetric-Eval)\], \[[Dataset](https://huggingface.co/datasets/qusgo/HarmMetric_Eval)\]<br>
 
 # Publications
 
