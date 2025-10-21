@@ -30,20 +30,20 @@ My earlier research focused on  **Password Security** , a topic I may revisit in
 
 # Preprints
 
-(<sup>&dagger;</sup>Denotes equal contribution.)
+(<sup>&dagger;</sup> denotes equal contribution, <sup>&#42;</sup> denotes the corresponding author.)
 
 - **[LLM Security] Dynamic Target Attack**
-    > Authors: **Kedong Xiu**, Churui Zeng, Tianhang Zheng, Xinzhe Huang, Xiaojun Jia, Di Wang, Puning Zhao, Zhan Qin, Kui Ren<br>
+    > Authors: **Kedong Xiu**, Churui Zeng, Tianhang Zheng<sup>&#42;</sup>, Xinzhe Huang, Xiaojun Jia, Di Wang, Puning Zhao, Zhan Qin, Kui Ren<br>
     > Paper: \[[arXiv](https://arxiv.org/abs/2510.02422)\]<br>
     > Repo: \[[GitHub](https://github.com/AIsec-ke/Dynamic-Target-Attack)\]<br>
 
 - **[LLM Security] Untargeted Jailbreak Attack**
-    > Authors: Xinzhe Huang, Wenjing Hu, Tianhang Zheng, **Kedong Xiu**, Xiaojun Jia, Di Wang, Zhan Qin, Kui Ren<br>
+    > Authors: Xinzhe Huang, Wenjing Hu, Tianhang Zheng<sup>&#42;</sup>, **Kedong Xiu**, Xiaojun Jia, Di Wang, Zhan Qin, Kui Ren<br>
     > Paper: \[[arXiv](https://arxiv.org/abs/2510.02999)\]<br>
     > Repo: \[[GitHub](https://github.com/hxz-sec/Untargeted-Jailbreak-Attack)\]<br>
 
 - **[LLM Security] HarmMetric Eval: Benchmarking Metrics and Judges for LLM Harmfulness Assessment**
-    > Authors: Langqi Yang, Tianhang Zheng, **Kedong Xiu**, Yixuan Chen, Di Wang, Puning Zhao, Zhan Qin, Kui Ren<br>
+    > Authors: Langqi Yang, Tianhang Zheng<sup>&#42;</sup>, **Kedong Xiu**, Yixuan Chen, Di Wang, Puning Zhao, Zhan Qin, Kui Ren<br>
     > Paper: \[[arXiv](https://arxiv.org/abs/2509.24384)\]<br>
     > Repo: \[[GitHub](https://github.com/Qusgo/HarmMetric-Eval)\], \[[Dataset](https://huggingface.co/datasets/qusgo/HarmMetric_Eval)\]<br>
 
@@ -55,25 +55,25 @@ My earlier research focused on  **Password Security** , a topic I may revisit in
 [Google Scholar](https://scholar.google.com/citations?user=yjn-6QkAAAAJ)
 
 - **[LLM Security] DualBreach:  Efficient Dual-Jailbreaking via Target-Driven Initialization and Multi-Target Optimization**
-    > Authors: Xinzhe Huang<sup>&dagger;</sup>, **Kedong Xiu**<sup>&dagger;</sup>, Tianhang Zheng, Churui Zeng, Wangze Ni, Zhan Qin, Kui Ren, Chun Chen<br>
+    > Authors: Xinzhe Huang<sup>&dagger;</sup>, **Kedong Xiu**<sup>&dagger;</sup>, Tianhang Zheng<sup>&#42;</sup>, Churui Zeng, Wangze Ni, Zhan Qin, Kui Ren, Chun Chen<br>
     > Venue: [*NDSS 2026*](https://www.ndss-symposium.org/ndss2026/) (<span style="color:red;">BIG4, CCF-A</span>)<br>
     > Paper: \[[arXiv](https://arxiv.org/abs/2504.18564)\]<br>
     > Repo: \[[GitHub](https://github.com/hxz-sec/DualBreach)\]<br>
 
 - **[VLM Security] CapRecover: A Cross-Modality Feature Inversion Attack Framework on Vision Language Models**
-    > Authors: **Kedong Xiu** and Sai Qian Zhang<br>
+    > Authors: **Kedong Xiu** and Sai Qian Zhang<sup>&#42;</sup><br>
     > Venue: ACM Multimedia (MM) 2025 (<span style="color:red;">CCF-A</span>)<br>
     > Paper: \[[arXiv](https://arxiv.org/abs/2507.22828)\]<br>
     > Repo: _TBD_<br>
 
 - **[Password Security] PointerGuess: Targeted Password Guessing Model Using Pointer Mechanism**
 
-    > Authors: **Kedong Xiu** and Ding Wang<br>
+    > Authors: **Kedong Xiu** and Ding Wang<sup>&#42;</sup><br>
     > Venue: USENIX Security 2024 (<span style="color:red;">BIG4, CCF-A</span>)<br>
     > Paper: \[[USENIX SEC](https://www.usenix.org/conference/usenixsecurity24/presentation/xiu)\]<br>
 
 - **[Password Security] Password Guessing using Random Forest**
 
-    > Authors: Ding Wang, Yunkai Zou, Zijian Zhang, **Kedong Xiu**<br>
+    > Authors: Ding Wang<sup>&#42;</sup>, Yunkai Zou, Zijian Zhang, **Kedong Xiu**<br>
     > Venue: USENIX Security 2023 (<span style="color:red;">BIG4, CCF-A</span>)<br>
     > Paper: \[[USENIX SEC](https://www.usenix.org/conference/usenixsecurity23/presentation/wang-ding-password-guessing)\]<br>
