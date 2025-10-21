@@ -56,24 +56,24 @@ My earlier research focused on  **Password Security** , a topic I may revisit in
 
 - **[LLM Security] DualBreach:  Efficient Dual-Jailbreaking via Target-Driven Initialization and Multi-Target Optimization**
     > Authors: Xinzhe Huang<sup>&dagger;</sup>, **Kedong Xiu**<sup>&dagger;</sup>, Tianhang Zheng<sup>&#42;</sup>, Churui Zeng, Wangze Ni, Zhan Qin, Kui Ren, Chun Chen<br>
-    > Venue: [*NDSS 2026*](https://www.ndss-symposium.org/ndss2026/) (<span style="color:red;">BIG4, CCF-A</span>)<br>
+    > Venue: [NDSS 2026](https://www.ndss-symposium.org/ndss2026/) (<span style="color:red;">BIG4, CCF-A</span>)<br>
     > Paper: \[[arXiv](https://arxiv.org/abs/2504.18564)\]<br>
     > Repo: \[[GitHub](https://github.com/hxz-sec/DualBreach)\]<br>
 
 - **[VLM Security] CapRecover: A Cross-Modality Feature Inversion Attack Framework on Vision Language Models**
     > Authors: **Kedong Xiu** and Sai Qian Zhang<sup>&#42;</sup><br>
-    > Venue: ACM Multimedia (MM) 2025 (<span style="color:red;">CCF-A</span>)<br>
+    > Venue: [ACM Multimedia (MM) 2025](https://acmmm2025.org/) (<span style="color:red;">CCF-A</span>)<br>
     > Paper: \[[arXiv](https://arxiv.org/abs/2507.22828)\]<br>
     > Repo: _TBD_<br>
 
 - **[Password Security] PointerGuess: Targeted Password Guessing Model Using Pointer Mechanism**
 
     > Authors: **Kedong Xiu** and Ding Wang<sup>&#42;</sup><br>
-    > Venue: USENIX Security 2024 (<span style="color:red;">BIG4, CCF-A</span>)<br>
+    > Venue: [USENIX Security 2024](https://www.usenix.org/conference/usenixsecurity24) (<span style="color:red;">BIG4, CCF-A</span>)<br>
     > Paper: \[[USENIX SEC](https://www.usenix.org/conference/usenixsecurity24/presentation/xiu)\]<br>
 
 - **[Password Security] Password Guessing using Random Forest**
 
     > Authors: Ding Wang<sup>&#42;</sup>, Yunkai Zou, Zijian Zhang, **Kedong Xiu**<br>
-    > Venue: USENIX Security 2023 (<span style="color:red;">BIG4, CCF-A</span>)<br>
+    > Venue: [USENIX Security 2023](https://www.usenix.org/conference/usenixsecurity23) (<span style="color:red;">BIG4, CCF-A</span>)<br>
     > Paper: \[[USENIX SEC](https://www.usenix.org/conference/usenixsecurity23/presentation/wang-ding-password-guessing)\]<br>
