@@ -64,7 +64,7 @@ My earlier research focused on  **Password Security** , a topic I may revisit in
     > Authors: **Kedong Xiu** and Sai Qian Zhang<sup>&#42;</sup><br>
     > Venue: [ACM Multimedia (MM) 2025](https://acmmm2025.org/) (<span style="color:red;">CCF-A</span>)<br>
     > Paper: \[[arXiv](https://arxiv.org/abs/2507.22828)\]<br>
-    > Repo: _TBD_<br>
+    > Repo: \[[WebPage](https://jus1mple.github.io/Image2CaptionAttack/)\], \[[GitHub](https://github.com/Jus1mple/Image2CaptionAttack)\]
 
 - **[Password Security] PointerGuess: Targeted Password Guessing Model Using Pointer Mechanism**
 
