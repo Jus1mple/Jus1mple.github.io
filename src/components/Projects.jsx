@@ -1,4 +1,5 @@
 import React from "react";
+import { ExternalLink, Github } from "lucide-react";
 import SectionHeading from "./SectionHeading.jsx";
 import { useLanguage } from "../contexts/LanguageContext.jsx";
 
@@ -11,31 +12,55 @@ export default function Projects() {
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <SectionHeading title={data.title} subtitle={data.subtitle} />
 
-        <div className="space-y-6">
+        <div className="grid gap-6 md:grid-cols-2">
           {data.items.map((p) => (
             <div
               key={p.name}
-              className="p-7 border border-gray-200 bg-white hover:border-gray-300 transition-colors"
+              className="flex h-full flex-col p-7 border border-gray-200 bg-white hover:border-gray-300 transition-colors"
             >
-              <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+              <div className="flex flex-col gap-2">
                 <div>
                   <div className="heading text-xl font-semibold text-gray-900">
                     {p.name}
                   </div>
-                  <div className="mt-3 text-base text-gray-600">
-                    <span className="inline-block px-2 py-0.5 mr-2 text-blue-700 bg-blue-50 border border-blue-200">
-                      {p.role}
-                    </span>
-                    <span>{p.period}</span>
-                    <span className="mx-2">|</span>
-                    <span>{p.funding}</span>
+                  <div className="mt-2 inline-flex px-2 py-0.5 text-sm text-blue-700 bg-blue-50 border border-blue-200">
+                    {p.type}
                   </div>
                 </div>
               </div>
 
-              <p className="mt-6 text-base leading-relaxed text-gray-700">{p.description}</p>
+              <p className="mt-4 text-base leading-relaxed text-gray-700">{p.description}</p>
 
-              {p.highlights.length ? (
+              {Array.isArray(p.stack) && p.stack.length ? (
+                <p className="mt-4 text-sm text-gray-600">{p.stack.join(" · ")}</p>
+              ) : null}
+
+              <div className="mt-5 flex flex-wrap items-center gap-4">
+                {p.github ? (
+                  <a
+                    href={p.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1 text-sm text-gray-600 hover:text-blue-700"
+                  >
+                    <Github className="h-4 w-4" />
+                    {data.labels.github}
+                  </a>
+                ) : null}
+                {p.demo ? (
+                  <a
+                    href={p.demo}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1 text-sm text-gray-600 hover:text-blue-700"
+                  >
+                    <ExternalLink className="h-4 w-4" />
+                    {data.labels.demo}
+                  </a>
+                ) : null}
+              </div>
+
+              {Array.isArray(p.highlights) && p.highlights.length ? (
                 <p className="mt-5 text-sm leading-relaxed text-gray-600">
                   {p.highlights.join(" · ")}
                 </p>

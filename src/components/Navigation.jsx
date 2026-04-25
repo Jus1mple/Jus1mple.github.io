@@ -3,7 +3,7 @@ import { Globe, Menu, X } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext.jsx";
 import { cn } from "../lib/utils";
 
-const NAV_ORDER = ["about", "research", "publications", "contact"];
+const NAV_ORDER = ["about", "research", "publications", "projects", "contact"];
 
 export default function Navigation() {
   const { t, language, toggleLanguage } = useLanguage();

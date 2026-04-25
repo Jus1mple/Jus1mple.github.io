@@ -12,6 +12,9 @@ export const publicationsContent = {
         citations: "次引用",
         pdf: "PDF",
         code: "代码",
+        quickView: "快速浏览",
+        summaryPlaceholder: "这里将展示该论文的简要描述，方便访客快速了解问题、方法与结果。",
+        methodImagePlaceholder: "方法核心图片待补充",
       },
       list: [
         {
@@ -25,6 +28,12 @@ export const publicationsContent = {
           type: "conference",
           pdf: "https://arxiv.org/abs/2504.18564",
           code: "https://github.com/hxz-sec/DualBreach",
+          overview: {
+            summary:
+              "DualBreach 面向 dual-jailbreaking 场景，提出目标驱动初始化与多目标联合优化，提高跨目标攻击效率与成功率。",
+            methodImage: "/images/papers/pub-1-method.png",
+            methodImageAlt: "DualBreach method overview",
+          },
         },
         {
           id: "pub-2",
@@ -37,6 +46,12 @@ export const publicationsContent = {
           type: "conference",
           pdf: "https://arxiv.org/abs/2507.22828",
           code: "https://github.com/Jus1mple/Image2CaptionAttack",
+          overview: {
+            summary:
+              "CapRecover 提出跨模态特征反演框架，研究视觉语言模型中的隐私泄露风险，并验证攻击有效性与可扩展性。",
+            methodImage: "/images/papers/pub-2-method.png",
+            methodImageAlt: "CapRecover framework overview",
+          },
         },
         {
           id: "pub-3",
@@ -48,6 +63,12 @@ export const publicationsContent = {
           type: "conference",
           pdf: "https://www.usenix.org/conference/usenixsecurity24/presentation/xiu",
           code: "#",
+          overview: {
+            summary:
+              "PointerGuess 利用指针机制进行定向口令猜测，在真实口令分布上实现更高的命中效率与实用性。",
+            methodImage: "/images/papers/pub-3-method.png",
+            methodImageAlt: "PointerGuess method overview",
+          },
         },
         {
           id: "pub-4",
@@ -59,6 +80,12 @@ export const publicationsContent = {
           type: "conference",
           pdf: "https://www.usenix.org/conference/usenixsecurity23/presentation/wang-ding-password-guessing",
           code: "#",
+          overview: {
+            summary:
+              "该工作探索随机森林在口令猜测任务中的建模能力，分析传统机器学习方法在安全场景中的优势与边界。",
+            methodImage: "/images/papers/pub-4-method.png",
+            methodImageAlt: "Random forest password guessing overview",
+          },
         },
       ],
     },
@@ -76,6 +103,10 @@ export const publicationsContent = {
         citations: "citations",
         pdf: "PDF",
         code: "Code",
+        quickView: "Quick View",
+        summaryPlaceholder:
+          "A short overview of this paper will be shown here for quick understanding.",
+        methodImagePlaceholder: "Core method figure to be added",
       },
       list: [
         {
@@ -89,6 +120,12 @@ export const publicationsContent = {
           type: "conference",
           pdf: "https://arxiv.org/abs/2504.18564",
           code: "https://github.com/hxz-sec/DualBreach",
+          overview: {
+            summary:
+              "DualBreach targets dual-jailbreaking with target-driven initialization and multi-target optimization to improve attack efficiency and success rate.",
+            methodImage: "/images/papers/pub-1-method.png",
+            methodImageAlt: "DualBreach method overview",
+          },
         },
         {
           id: "pub-2",
@@ -101,6 +138,12 @@ export const publicationsContent = {
           type: "conference",
           pdf: "https://arxiv.org/abs/2507.22828",
           code: "https://github.com/Jus1mple/Image2CaptionAttack",
+          overview: {
+            summary:
+              "CapRecover introduces a cross-modality feature inversion framework to expose privacy leakage risks in vision-language models.",
+            methodImage: "/images/papers/pub-2-method.png",
+            methodImageAlt: "CapRecover framework overview",
+          },
         },
         {
           id: "pub-3",
@@ -112,6 +155,12 @@ export const publicationsContent = {
           type: "conference",
           pdf: "https://www.usenix.org/conference/usenixsecurity24/presentation/xiu",
           code: "#",
+          overview: {
+            summary:
+              "PointerGuess applies a pointer mechanism to targeted password guessing and improves practical hit efficiency.",
+            methodImage: "/images/papers/pub-3-method.png",
+            methodImageAlt: "PointerGuess method overview",
+          },
         },
         {
           id: "pub-4",
@@ -123,6 +172,12 @@ export const publicationsContent = {
           type: "conference",
           pdf: "https://www.usenix.org/conference/usenixsecurity23/presentation/wang-ding-password-guessing",
           code: "#",
+          overview: {
+            summary:
+              "This work studies random forests for password guessing and analyzes the strengths and limitations of classical ML approaches.",
+            methodImage: "/images/papers/pub-4-method.png",
+            methodImageAlt: "Random forest password guessing overview",
+          },
         },
       ],
     },
