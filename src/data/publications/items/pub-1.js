@@ -21,7 +21,7 @@ export const publication = {
     overview: {
       summary:
         "DualBreach 面向 dual-jailbreaking 场景，提出目标驱动初始化与多目标联合优化，提高跨目标攻击效率与成功率。",
-      methodImage: "/images/papers/pub-1-method.png",
+      methodImage: "/images/papers/dualbreach.png",
       methodImageAlt: "DualBreach method overview",
     },
   },
@@ -47,7 +47,7 @@ export const publication = {
     overview: {
       summary:
         "DualBreach targets dual-jailbreaking with target-driven initialization and multi-target optimization to improve attack efficiency and success rate.",
-      methodImage: "/images/papers/pub-1-method.png",
+      methodImage: "/images/papers/dualbreach.png",
       methodImageAlt: "DualBreach method overview",
     },
   },
