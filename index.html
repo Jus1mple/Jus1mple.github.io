@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PhD Student | Academic Homepage</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS v4 (browser runtime, CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --font-title-zh: "Noto Serif SC", serif;
+        --font-body-zh: "Noto Serif SC", serif;
+        --font-en: "Times New Roman", serif;
+        --font-sans: var(--font-body-zh), var(--font-en), ui-serif, Georgia, serif;
+        --font-serif: var(--font-title-zh), ui-serif, Georgia, serif;
+      }
+    </style>
+    <style>
+      html {
+        scroll-behavior: auto;
+      }
+      body {
+        font-family: var(--font-sans);
+        color: #374151;
+        background: #ffffff;
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: var(--font-title-zh);
+      }
+      .heading {
+        font-family: var(--font-title-zh);
+        color: #111827;
+        letter-spacing: -0.02em;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/index.jsx"></script>
+  </body>
+</html>
+
