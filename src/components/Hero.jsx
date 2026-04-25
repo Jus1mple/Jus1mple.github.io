@@ -1,10 +1,60 @@
 import React from "react";
-import { BookOpen, Mail, MapPin } from "lucide-react";
+import { BookOpen, Compass, GraduationCap, Mail, MapPin } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext.jsx";
+
+function renderAdvisorLine(advisorText) {
+  if (typeof advisorText !== "string" || !advisorText.trim()) return advisorText;
+
+  const tianhang = "郑天航";
+  const kuiren = "任奎";
+
+  const parts = advisorText.split(/(郑天航|任奎)/g);
+  return (
+    <>
+      <span className="mr-1 inline-flex h-5 w-5 items-center justify-center rounded-full bg-blue-100 text-blue-700 align-middle">
+        <GraduationCap className="h-3.5 w-3.5" />
+      </span>
+      {parts.map((part, i) => {
+        if (part === tianhang) {
+          return (
+            <a
+              key={`advisor-${i}`}
+              href="https://tianzheng4.github.io/"
+              target="_blank"
+              rel="noreferrer"
+              className="font-medium text-gray-700 hover:text-blue-700"
+            >
+              {tianhang}
+            </a>
+          );
+        }
+        if (part === kuiren) {
+          return (
+            <a
+              key={`advisor-${i}`}
+              href="https://person.zju.edu.cn/kuiren"
+              target="_blank"
+              rel="noreferrer"
+              className="font-medium text-gray-700 hover:text-blue-700"
+            >
+              {kuiren}
+            </a>
+          );
+        }
+        return <React.Fragment key={`advisor-${i}`}>{part}</React.Fragment>;
+      })}
+    </>
+  );
+}
 
 export default function Hero() {
   const { t } = useLanguage();
   const data = t.hero;
+
+  const showZjuMark =
+    typeof data.department === "string" &&
+    (data.department.includes("浙江大学") ||
+      data.department.toLowerCase().includes("zhejiang university"));
 
   return (
     <section id="home" className="min-h-screen bg-white pt-18">
@@ -21,15 +71,23 @@ export default function Hero() {
 
           <div className="mt-8 space-y-1 text-base leading-relaxed text-gray-700">
             <p>
+              {showZjuMark ? (
+                <span className="mr-2 inline-flex h-5 w-5 items-center justify-center rounded-full bg-blue-100 text-[10px] font-semibold text-blue-700 align-middle">
+                  ZJU
+                </span>
+              ) : null}
               {data.department}
               {data.lab ? <span className="mx-2 text-gray-400">·</span> : null}
               {data.lab}
             </p>
-            <p>{data.advisor}</p>
+            <p>{renderAdvisorLine(data.advisor)}</p>
           </div>
 
           <div className="mt-10">
-            <div className="text-base font-medium text-gray-900">
+            <div className="inline-flex items-center gap-2 text-base font-semibold text-gray-900">
+              <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-blue-100 text-blue-700">
+                <Compass className="h-3.5 w-3.5" />
+              </span>
               {data.researchAreas}
             </div>
             <p className="mt-2 max-w-3xl text-base leading-relaxed text-gray-700">
