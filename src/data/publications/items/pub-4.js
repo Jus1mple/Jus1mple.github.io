@@ -25,7 +25,7 @@ export const publication = {
     overview: {
       summary:
         "该工作探索随机森林在口令猜测任务中的建模能力，分析传统机器学习方法在安全场景中的优势与边界。",
-      methodImage: "/images/papers/pub-4-method.png",
+      methodImage: "/images/papers/rfguess.png",
       methodImageAlt: "Random forest password guessing overview",
     },
   },
@@ -54,7 +54,7 @@ export const publication = {
     overview: {
       summary:
         "This work studies random forests for password guessing and analyzes the strengths and limitations of classical ML approaches.",
-      methodImage: "/images/papers/pub-4-method.png",
+      methodImage: "/images/papers/rfguess.png",
       methodImageAlt: "Random forest password guessing overview",
     },
   },

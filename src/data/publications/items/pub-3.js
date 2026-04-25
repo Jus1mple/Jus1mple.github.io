@@ -25,7 +25,7 @@ export const publication = {
     overview: {
       summary:
         "PointerGuess 利用指针机制进行定向口令猜测，在真实口令分布上实现更高的命中效率与实用性。",
-      methodImage: "/images/papers/pub-3-method.png",
+      methodImage: "/images/papers/pointerguess.png",
       methodImageAlt: "PointerGuess method overview",
     },
   },
@@ -54,7 +54,7 @@ export const publication = {
     overview: {
       summary:
         "PointerGuess applies a pointer mechanism to targeted password guessing and improves practical hit efficiency.",
-      methodImage: "/images/papers/pub-3-method.png",
+      methodImage: "/images/papers/pointerguess.png",
       methodImageAlt: "PointerGuess method overview",
     },
   },

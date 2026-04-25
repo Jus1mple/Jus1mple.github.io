@@ -22,7 +22,7 @@ export const publication = {
     overview: {
       summary:
         "CapRecover 提出跨模态特征反演框架，研究视觉语言模型中的隐私泄露风险，并验证攻击有效性与可扩展性。",
-      methodImage: "/images/papers/pub-2-method.png",
+      methodImage: "/images/papers/caprecover.png",
       methodImageAlt: "CapRecover framework overview",
     },
     detailsCss: `
@@ -109,7 +109,7 @@ export const publication = {
   CAPRECOVER contains three modules: (i) feature projection, (ii) feature-text alignment (Q-Former), and (iii) description generation (frozen LLM).
 </p>
 <figure>
-  <img src="/images/papers/pub-2-method.png" alt="CAPRECOVER framework diagram" />
+  <img src="/images/papers/caprecover.png" alt="CAPRECOVER framework diagram" />
   <figcaption>Figure: The CAPRECOVER framework comprises three core modules.</figcaption>
 </figure>
 
@@ -208,7 +208,7 @@ export const publication = {
     overview: {
       summary:
         "CapRecover introduces a cross-modality feature inversion framework to expose privacy leakage risks in vision-language models.",
-      methodImage: "/images/papers/pub-2-method.png",
+      methodImage: "/images/papers/caprecover.png",
       methodImageAlt: "CapRecover framework overview",
     },
     detailsCss: `
@@ -295,7 +295,7 @@ export const publication = {
   CAPRECOVER contains three modules: (i) feature projection, (ii) feature-text alignment (Q-Former), and (iii) description generation (frozen LLM).
 </p>
 <figure>
-  <img src="/images/papers/pub-2-method.png" alt="CAPRECOVER framework diagram" />
+  <img src="/images/papers/caprecover.png" alt="CAPRECOVER framework diagram" />
   <figcaption>Figure: The CAPRECOVER framework comprises three core modules.</figcaption>
 </figure>
 

@@ -21,7 +21,7 @@ export const publication = {
     overview: {
       summary:
         "Dynamic Target Attack（DTA）是一种面向安全对齐大模型的越狱攻击框架，不再优化到固定且低概率的目标响应。DTA 在每轮中从目标模型输出分布采样多个候选响应，选择其中最具危害性的响应作为临时优化目标，并迭代更新对抗后缀。该动态目标机制有效降低了目标与模型输出分布的不匹配，在白盒与黑盒场景下均表现出更高的攻击效果与效率。",
-      methodImage: "/images/papers/pub-5-method.png",
+      methodImage: "/images/papers/dta.png",
       methodImageAlt: "Dynamic Target Attack 方法概览图",
     },
   },
@@ -46,7 +46,7 @@ export const publication = {
     overview: {
       summary:
         "Dynamic Target Attack (DTA) is a jailbreak framework that avoids optimizing toward a fixed low-probability target response. In each round, it samples multiple candidate responses from the target model's output distribution, selects the most harmful one as a temporary optimization target, and iteratively updates the adversarial suffix. This adaptive target selection reduces target-distribution mismatch and improves both attack effectiveness and optimization efficiency in white-box and black-box settings.",
-      methodImage: "/images/papers/pub-5-method.png",
+      methodImage: "/images/papers/dta.png",
       methodImageAlt: "Dynamic Target Attack method overview",
     },
   },

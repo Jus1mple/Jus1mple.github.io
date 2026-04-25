@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { ChevronDown, ChevronUp, ExternalLink, Github, Quote } from "lucide-react";
 import SectionHeading from "./SectionHeading.jsx";
 import { useLanguage } from "../contexts/LanguageContext.jsx";
@@ -126,6 +126,49 @@ export default function Publications() {
   const [brokenImages, setBrokenImages] = useState({});
   const [citePaper, setCitePaper] = useState(null);
   const [paperModalId, setPaperModalId] = useState(null);
+
+  const methodImageById = useMemo(() => {
+    const m = {};
+    for (const p of data.list || []) {
+      const src = p?.overview?.methodImage;
+      m[p.id] = typeof src === "string" ? src : "";
+    }
+    return m;
+  }, [data.list]);
+
+  const prevMethodImageByIdRef = useRef({});
+
+  useEffect(() => {
+    const prev = prevMethodImageByIdRef.current || {};
+    const ids = new Set([...Object.keys(prev), ...Object.keys(methodImageById)]);
+
+    const changedIds = [];
+    for (const id of ids) {
+      const nextSrc = methodImageById[id] || "";
+      const prevSrc = prev[id] || "";
+      if (prevSrc !== nextSrc) changedIds.push(id);
+    }
+
+    const isFirstRun = Object.keys(prev).length === 0;
+    prevMethodImageByIdRef.current = methodImageById;
+
+    // First run: nothing to reconcile yet.
+    if (isFirstRun) return;
+
+    if (!changedIds.length) return;
+
+    setBrokenImages((prevBroken) => {
+      let changed = false;
+      const nextBroken = { ...prevBroken };
+      for (const id of changedIds) {
+        if (nextBroken[id]) {
+          delete nextBroken[id];
+          changed = true;
+        }
+      }
+      return changed ? nextBroken : prevBroken;
+    });
+  }, [methodImageById]);
 
   const indexById = useMemo(() => {
     const m = new Map();
