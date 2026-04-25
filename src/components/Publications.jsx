@@ -266,7 +266,20 @@ export default function Publications() {
                       href="#"
                       onClick={(e) => {
                         e.preventDefault();
-                        setExpandedPaperId(isExpanded ? null : p.id);
+                        if (isExpanded) {
+                          setExpandedPaperId(null);
+                          return;
+                        }
+
+                        // Retry image load when re-opening quick view (covers transient failures / stale broken flags).
+                        setBrokenImages((prev) => {
+                          if (!prev[p.id]) return prev;
+                          const next = { ...prev };
+                          delete next[p.id];
+                          return next;
+                        });
+
+                        setExpandedPaperId(p.id);
                       }}
                       className="inline-flex items-center gap-1 text-sm font-medium text-blue-700 hover:text-blue-800 sm:justify-end"
                       aria-expanded={isExpanded}
@@ -290,6 +303,7 @@ export default function Publications() {
                     <div className="mt-4">
                       {hasMethodImage ? (
                         <img
+                          key={overview.methodImage}
                           src={overview.methodImage}
                           alt={overview.methodImageAlt || p.title}
                           onError={() => {
