@@ -23,8 +23,22 @@ export default function Projects() {
                   <div className="heading text-xl font-semibold text-gray-900">
                     {p.name}
                   </div>
-                  <div className="mt-2 inline-flex px-2 py-0.5 text-sm text-blue-700 bg-blue-50 border border-blue-200">
-                    {p.type}
+                  <div className="mt-2 flex items-center gap-2">
+                    <div className="inline-flex px-2 py-0.5 text-sm text-blue-700 bg-blue-50 border border-blue-200">
+                      {p.type}
+                    </div>
+                    {p.github ? (
+                      <a
+                        href={p.github}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label={data.labels.github}
+                        title={data.labels.github}
+                        className="inline-flex h-7 w-7 items-center justify-center rounded-md text-blue-600 hover:bg-blue-50 hover:text-blue-700"
+                      >
+                        <Github className="h-4 w-4" />
+                      </a>
+                    ) : null}
                   </div>
                 </div>
               </div>
@@ -35,19 +49,8 @@ export default function Projects() {
                 <p className="mt-4 text-sm text-gray-600">{p.stack.join(" · ")}</p>
               ) : null}
 
-              <div className="mt-5 flex flex-wrap items-center gap-4">
-                {p.github ? (
-                  <a
-                    href={p.github}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-1 text-sm text-gray-600 hover:text-blue-700"
-                  >
-                    <Github className="h-4 w-4" />
-                    {data.labels.github}
-                  </a>
-                ) : null}
-                {p.demo ? (
+              {p.demo ? (
+                <div className="mt-5 flex flex-wrap items-center gap-4">
                   <a
                     href={p.demo}
                     target="_blank"
@@ -57,8 +60,8 @@ export default function Projects() {
                     <ExternalLink className="h-4 w-4" />
                     {data.labels.demo}
                   </a>
-                ) : null}
-              </div>
+                </div>
+              ) : null}
 
               {Array.isArray(p.highlights) && p.highlights.length ? (
                 <p className="mt-5 text-sm leading-relaxed text-gray-600">

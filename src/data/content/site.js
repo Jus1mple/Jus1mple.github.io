@@ -74,7 +74,7 @@ export const siteContent = {
     },
     projects: {
       title: "开源项目",
-      subtitle: "这里展示我维护或参与的开源代码与工具。",
+      subtitle: "我维护或参与的开源代码与工具。",
       labels: {
         github: "GitHub",
         demo: "演示",
@@ -176,7 +176,7 @@ export const siteContent = {
     },
     projects: {
       title: "Open-Source Projects",
-      subtitle: "A selection of open-source repositories and research code I maintain.",
+      subtitle: "Open-source repositories and research code I maintain or contribute to.",
       labels: {
         github: "GitHub",
         demo: "Demo",

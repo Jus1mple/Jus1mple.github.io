@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from "react";
-import { ChevronDown, ChevronUp, ExternalLink, Github } from "lucide-react";
+import { ChevronDown, ChevronUp, ExternalLink, Github, Quote } from "lucide-react";
 import SectionHeading from "./SectionHeading.jsx";
 import { useLanguage } from "../contexts/LanguageContext.jsx";
 import { cn } from "../lib/utils";
@@ -32,12 +32,98 @@ function hasValidLink(href) {
   return typeof href === "string" && href.trim() !== "" && href.trim() !== "#";
 }
 
+function getArxivId(pdfLink) {
+  if (!hasValidLink(pdfLink)) return null;
+  const m = pdfLink.match(/arxiv\.org\/abs\/([0-9]{4}\.[0-9]{4,5}(?:v[0-9]+)?)/i);
+  return m ? m[1] : null;
+}
+
+function isArxivVenue(venue) {
+  return typeof venue === "string" && venue.toLowerCase().includes("arxiv");
+}
+
+function normalizeAuthorsForBib(authors) {
+  if (typeof authors !== "string") return "";
+  return authors
+    .replace(/[†*]/g, "")
+    .replace(/\s*等$/, "")
+    .replace(/，/g, ",")
+    .split(",")
+    .map((name) => name.trim())
+    .filter(Boolean)
+    .join(" and ");
+}
+
+function bibKeyFromPaper(p) {
+  const firstAuthor = (p.authors || "paper").split(",")[0] || "paper";
+  const token = firstAuthor.trim().split(/\s+/).pop() || "paper";
+  const safeToken = token.toLowerCase().replace(/[^a-z0-9]/g, "");
+  return `${safeToken}${p.year || "xxxx"}${p.id || ""}`;
+}
+
+function buildBibtex(p) {
+  if (typeof p.bibtex === "string" && p.bibtex.trim()) {
+    return p.bibtex.trim();
+  }
+
+  const arxivId = getArxivId(p.pdf);
+  const authors = normalizeAuthorsForBib(p.authors);
+  const key = bibKeyFromPaper(p);
+
+  if (arxivId || p.type === "preprint") {
+    return `@article{${key},
+  title={${p.title}},
+  author={${authors}},
+  journal={arXiv preprint arXiv:${arxivId || ""}},
+  year={${p.year}},
+  url={${p.pdf || ""}}
+}`;
+  }
+
+  return `@inproceedings{${key},
+  title={${p.title}},
+  author={${authors}},
+  booktitle={${p.venue}},
+  year={${p.year}},
+  url={${p.pdf || ""}}
+}`;
+}
+
+function emphasizeName(text, name) {
+  if (typeof text !== "string" || !text.trim()) return text;
+  if (typeof name !== "string" || !name.trim()) return text;
+
+  const escaped = name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const re = new RegExp(escaped, "gi");
+  const parts = text.split(re);
+  const matches = text.match(re);
+  if (!matches) return text;
+
+  const out = [];
+  for (let i = 0; i < parts.length; i += 1) {
+    if (parts[i]) out.push(parts[i]);
+    if (i < matches.length) {
+      out.push(
+        <span key={`${name}-${i}`} className="font-medium text-gray-700">
+          {matches[i]}
+        </span>,
+      );
+    }
+  }
+  return out;
+}
+
 export default function Publications({ onViewDetails }) {
   const { t, language } = useLanguage();
   const data = t.publications;
   const quickViewLabel = data.labels.quickView || (language === "zh" ? "快速浏览" : "Quick View");
+  const citeLabel = data.labels.cite || (language === "zh" ? "查看引用" : "View citation");
+  const bibTitle = data.labels.bibtex || "BibTeX";
+  const closeLabel = data.labels.close || (language === "zh" ? "关闭" : "Close");
+  const copyLabel = data.labels.copy || (language === "zh" ? "复制" : "Copy");
   const [expandedPaperId, setExpandedPaperId] = useState(null);
   const [brokenImages, setBrokenImages] = useState({});
+  const [citePaper, setCitePaper] = useState(null);
 
   const indexById = useMemo(() => {
     const m = new Map();
@@ -67,15 +153,17 @@ export default function Publications({ onViewDetails }) {
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
                   <div className="min-w-0">
                     <div className="flex items-start gap-3">
-                      <div className="mt-0.5 w-8 shrink-0 text-right text-sm text-gray-600">
-                        {indexById.get(p.id)}.
+                      <div className="mt-0.5 w-8 shrink-0 text-right">
+                        <span className="inline-flex min-w-8 justify-end px-1.5 py-0.5 text-sm font-medium text-gray-800">
+                          {indexById.get(p.id)}.
+                        </span>
                       </div>
                       <div className="min-w-0">
                         <div className="heading text-lg font-semibold leading-snug text-gray-900">
                           {p.title}
                         </div>
                         <div className="mt-2 text-base text-gray-600">
-                          {p.authors}
+                          {emphasizeName(p.authors, "Kedong Xiu")}
                         </div>
                         <div className="mt-3 flex flex-wrap items-center gap-2 text-sm">
                           <span
@@ -87,6 +175,20 @@ export default function Publications({ onViewDetails }) {
                             {typeBadgeLabel(p.type, data.labels)}
                           </span>
                           <span className="text-gray-600">{p.venue}</span>
+                          {isArxivVenue(p.venue) && getArxivId(p.pdf) ? (
+                            <span className="text-gray-500">arXiv:{getArxivId(p.pdf)}</span>
+                          ) : null}
+                          <button
+                            type="button"
+                            onClick={() => setCitePaper(p)}
+                            aria-label={citeLabel}
+                            title={citeLabel}
+                            className="inline-flex items-center gap-1 rounded-md px-2 py-0.5 text-sm font-medium text-blue-700 hover:bg-blue-50"
+                          >
+                            <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-blue-100 text-blue-700">
+                              <Quote className="h-2.5 w-2.5" strokeWidth={2.4} />
+                            </span>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -162,6 +264,39 @@ export default function Publications({ onViewDetails }) {
           })}
         </div>
       </div>
+
+      {citePaper ? (
+        <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/40 px-4">
+          <div className="w-full max-w-3xl border border-gray-200 bg-white p-5 shadow-xl">
+            <div className="mb-3 flex items-center justify-between gap-4">
+              <h3 className="heading text-lg font-semibold text-gray-900">{bibTitle}</h3>
+              <button
+                type="button"
+                onClick={() => setCitePaper(null)}
+                className="text-sm text-gray-600 hover:text-blue-700"
+              >
+                {closeLabel}
+              </button>
+            </div>
+            <textarea
+              readOnly
+              value={buildBibtex(citePaper)}
+              className="h-60 w-full resize-y border border-gray-300 p-3 text-sm leading-relaxed text-gray-700 outline-none"
+            />
+            <div className="mt-3 flex justify-end">
+              <button
+                type="button"
+                onClick={() => {
+                  navigator.clipboard?.writeText(buildBibtex(citePaper));
+                }}
+                className="border border-gray-300 px-3 py-1.5 text-sm text-gray-700 hover:border-gray-400"
+              >
+                {copyLabel}
+              </button>
+            </div>
+          </div>
+        </div>
+      ) : null}
     </section>
   );
 }

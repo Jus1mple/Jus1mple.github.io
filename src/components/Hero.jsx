@@ -20,8 +20,11 @@ export default function Hero() {
           <p className="mt-3 text-lg font-medium text-gray-600">{data.englishName}</p>
 
           <div className="mt-8 space-y-1 text-base leading-relaxed text-gray-700">
-            <p>{data.department}</p>
-            <p>{data.lab}</p>
+            <p>
+              {data.department}
+              {data.lab ? <span className="mx-2 text-gray-400">·</span> : null}
+              {data.lab}
+            </p>
             <p>{data.advisor}</p>
           </div>
 

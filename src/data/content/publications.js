@@ -13,10 +13,31 @@ export const publicationsContent = {
         pdf: "PDF",
         code: "代码",
         quickView: "快速浏览",
+        cite: "引用",
+        bibtex: "BibTeX 引用",
+        close: "关闭",
+        copy: "复制",
         summaryPlaceholder: "这里将展示该论文的简要描述，方便访客快速了解问题、方法与结果。",
         methodImagePlaceholder: "方法核心图片待补充",
       },
       list: [
+        {
+          id: "pub-5",
+          title: "Dynamic Target Attack",
+          authors: "Kedong Xiu, Churui Zeng, Tianhang Zheng, Xinzhe Huang, Xiaojun Jia, Di Wang, Puning Zhao, Zhan Qin, Kui Ren",
+          venue: "arXiv",
+          year: 2025,
+          citations: 0,
+          type: "preprint",
+          pdf: "https://arxiv.org/abs/2510.02422",
+          code: "https://github.com/AIsec-ke/Dynamic-Target-Attack",
+          overview: {
+            summary:
+              "Dynamic Target Attack（DTA）是一种面向安全对齐大模型的越狱攻击框架，不再优化到固定且低概率的目标响应。DTA 在每轮中从目标模型输出分布采样多个候选响应，选择其中最具危害性的响应作为临时优化目标，并迭代更新对抗后缀。该动态目标机制有效降低了目标与模型输出分布的不匹配，在白盒与黑盒场景下均表现出更高的攻击效果与效率。",
+            methodImage: "/images/papers/pub-5-method.png",
+            methodImageAlt: "Dynamic Target Attack 方法概览图",
+          },
+        },
         {
           id: "pub-1",
           title:
@@ -104,11 +125,32 @@ export const publicationsContent = {
         pdf: "PDF",
         code: "Code",
         quickView: "Quick View",
+        cite: "Cite",
+        bibtex: "BibTeX Citation",
+        close: "Close",
+        copy: "Copy",
         summaryPlaceholder:
           "A short overview of this paper will be shown here for quick understanding.",
         methodImagePlaceholder: "Core method figure to be added",
       },
       list: [
+        {
+          id: "pub-5",
+          title: "Dynamic Target Attack",
+          authors: "Kedong Xiu, Churui Zeng, Tianhang Zheng, Xinzhe Huang, Xiaojun Jia, Di Wang, Puning Zhao, Zhan Qin, Kui Ren",
+          venue: "arXiv",
+          year: 2025,
+          citations: 0,
+          type: "preprint",
+          pdf: "https://arxiv.org/abs/2510.02422",
+          code: "https://github.com/AIsec-ke/Dynamic-Target-Attack",
+          overview: {
+            summary:
+              "Dynamic Target Attack (DTA) is a jailbreak framework that avoids optimizing toward a fixed low-probability target response. In each round, it samples multiple candidate responses from the target model's output distribution, selects the most harmful one as a temporary optimization target, and iteratively updates the adversarial suffix. This adaptive target selection reduces target-distribution mismatch and improves both attack effectiveness and optimization efficiency in white-box and black-box settings.",
+            methodImage: "/images/papers/pub-5-method.png",
+            methodImageAlt: "Dynamic Target Attack method overview",
+          },
+        },
         {
           id: "pub-1",
           title:
