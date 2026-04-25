@@ -1,3 +1,5 @@
+import { projectsByLang } from "../projects/index.js";
+
 export const siteContent = {
   zh: {
     nav: {
@@ -72,34 +74,7 @@ export const siteContent = {
         { title: "口令安全", description: "延续早期口令猜测与认证安全研究经验，连接到新方向。" },
       ],
     },
-    projects: {
-      title: "开源项目",
-      subtitle: "我维护或参与的开源代码与工具。",
-      labels: {
-        github: "GitHub",
-        demo: "演示",
-      },
-      items: [
-        {
-          name: "DualBreach",
-          type: "Research Code",
-          description: "Dual-jailbreaking 相关实现与实验代码，用于复现实验并支持后续研究扩展。",
-          stack: ["Python", "PyTorch", "LLM Security"],
-          github: "https://github.com/hxz-sec/DualBreach",
-          demo: "",
-          highlights: ["攻击流程复现", "多目标优化", "实验脚本自动化"],
-        },
-        {
-          name: "Image2CaptionAttack",
-          type: "Research Code",
-          description: "面向视觉语言模型反演攻击的开源实现，提供训练与评估基线。",
-          stack: ["Python", "Vision-Language Models", "Security Evaluation"],
-          github: "https://github.com/Jus1mple/Image2CaptionAttack",
-          demo: "",
-          highlights: ["跨模态攻击流程", "结果可视化", "可扩展评测接口"],
-        },
-      ],
-    },
+    projects: projectsByLang.zh,
   },
   en: {
     nav: {
@@ -174,33 +149,6 @@ export const siteContent = {
         { title: "Password Security", description: "Previous work on password guessing and authentication security." },
       ],
     },
-    projects: {
-      title: "Open-Source Projects",
-      subtitle: "Open-source repositories and research code I maintain or contribute to.",
-      labels: {
-        github: "GitHub",
-        demo: "Demo",
-      },
-      items: [
-        {
-          name: "DualBreach",
-          type: "Research Code",
-          description: "Implementation and experiment toolkit for dual-jailbreaking research and reproducible evaluations.",
-          stack: ["Python", "PyTorch", "LLM Security"],
-          github: "https://github.com/hxz-sec/DualBreach",
-          demo: "",
-          highlights: ["Attack pipeline reproduction", "Multi-target optimization", "Automated experiment scripts"],
-        },
-        {
-          name: "Image2CaptionAttack",
-          type: "Research Code",
-          description: "Open-source framework for feature inversion attacks on vision-language models.",
-          stack: ["Python", "Vision-Language Models", "Security Evaluation"],
-          github: "https://github.com/Jus1mple/Image2CaptionAttack",
-          demo: "",
-          highlights: ["Cross-modality attack flow", "Result visualization", "Extensible evaluation hooks"],
-        },
-      ],
-    },
+    projects: projectsByLang.en,
   },
 };

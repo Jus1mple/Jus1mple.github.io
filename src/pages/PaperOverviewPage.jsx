@@ -1,6 +1,8 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { ArrowLeft, Copy, ExternalLink, Github, Quote } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext.jsx";
+import renderMathInElement from "katex/contrib/auto-render";
+import "katex/dist/katex.min.css";
 
 function hasValidLink(href) {
   return typeof href === "string" && href.trim() !== "" && href.trim() !== "#";
@@ -10,6 +12,7 @@ export default function PaperOverviewPage({ publication, onBack, mode = "page" }
   const { language } = useLanguage();
   const isModal = mode === "modal";
   const [isBibOpen, setIsBibOpen] = useState(false);
+  const detailsRef = useRef(null);
 
   const bibLabel = useMemo(
     () => (language === "zh" ? "引用" : "Cite"),
@@ -57,6 +60,29 @@ export default function PaperOverviewPage({ publication, onBack, mode = "page" }
       </div>
     );
   }
+
+  const detailsHtml =
+    typeof publication.detailsHtml === "string" ? publication.detailsHtml : "";
+  const detailsCss =
+    typeof publication.detailsCss === "string" ? publication.detailsCss : "";
+  const hasDetails = Boolean(detailsHtml.trim());
+
+  useEffect(() => {
+    if (!hasDetails) return;
+    const el = detailsRef.current;
+    if (!el) return;
+
+    renderMathInElement(el, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true },
+      ],
+      throwOnError: false,
+      strict: "ignore",
+    });
+  }, [hasDetails, detailsHtml]);
 
   return (
     <div className={isModal ? "bg-white text-gray-700" : "min-h-screen bg-white text-gray-700"}>
@@ -148,16 +174,29 @@ export default function PaperOverviewPage({ publication, onBack, mode = "page" }
             </section>
           ) : null}
 
-          <section className="mt-8 border-t border-gray-100 pt-6">
-            <h2 className="text-lg font-medium text-gray-900">
-              {language === "zh" ? "内容占位（待你补充）" : "Placeholder Content (To Be Filled)"}
-            </h2>
-            <p className="mt-3 text-base leading-relaxed text-gray-600">
-              {language === "zh"
-                ? "这里已预留为论文快速浏览页，你后续可以加入摘要、方法图、关键贡献、实验结果、局限性与FAQ。"
-                : "This page is ready for your paper overview. You can later add abstract, method figure, key contributions, results, limitations, and FAQ."}
-            </p>
-          </section>
+          {hasDetails ? (
+            <section className="mt-8 border-t border-gray-100 pt-6">
+              {detailsCss.trim() ? (
+                <style>{detailsCss}</style>
+              ) : null}
+              <div
+                ref={detailsRef}
+                className="paper-details prose prose-slate max-w-none"
+                dangerouslySetInnerHTML={{ __html: detailsHtml }}
+              />
+            </section>
+          ) : (
+            <section className="mt-8 border-t border-gray-100 pt-6">
+              <h2 className="text-lg font-medium text-gray-900">
+                {language === "zh" ? "内容占位（待你补充）" : "Placeholder Content (To Be Filled)"}
+              </h2>
+              <p className="mt-3 text-base leading-relaxed text-gray-600">
+                {language === "zh"
+                  ? "这里已预留为论文快速浏览页，你后续可以加入摘要、方法图、关键贡献、实验结果、局限性与FAQ。"
+                  : "This page is ready for your paper overview. You can later add abstract, method figure, key contributions, results, limitations, and FAQ."}
+              </p>
+            </section>
+          )}
         </article>
       </main>
     </div>

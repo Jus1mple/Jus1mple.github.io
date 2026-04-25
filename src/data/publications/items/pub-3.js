@@ -1,0 +1,62 @@
+export const publication = {
+  id: "pub-3",
+  zh: {
+    id: "pub-3",
+    title: "PointerGuess: Targeted Password Guessing Model Using Pointer Mechanism",
+    authors: "Kedong Xiu, Ding Wang*",
+    venue: "USENIX Security 2024",
+    year: 2024,
+    citations: 0,
+    type: "conference",
+    pdf: "https://www.usenix.org/conference/usenixsecurity24/presentation/xiu",
+    code: "#",
+    bibtex: `@inproceedings{298094,
+  author = {Kedong Xiu and Ding Wang},
+  title = {{PointerGuess}: Targeted Password Guessing Model Using Pointer Mechanism},
+  booktitle = {33rd USENIX Security Symposium (USENIX Security 24)},
+  year = {2024},
+  isbn = {978-1-939133-44-1},
+  address = {Philadelphia, PA},
+  pages = {5555--5572},
+  url = {https://www.usenix.org/conference/usenixsecurity24/presentation/xiu},
+  publisher = {USENIX Association},
+  month = aug
+}`,
+    overview: {
+      summary:
+        "PointerGuess 利用指针机制进行定向口令猜测，在真实口令分布上实现更高的命中效率与实用性。",
+      methodImage: "/images/papers/pub-3-method.png",
+      methodImageAlt: "PointerGuess method overview",
+    },
+  },
+  en: {
+    id: "pub-3",
+    title: "PointerGuess: Targeted Password Guessing Model Using Pointer Mechanism",
+    authors: "Kedong Xiu, Ding Wang*",
+    venue: "USENIX Security Symposium 2024",
+    year: 2024,
+    citations: 0,
+    type: "conference",
+    pdf: "https://www.usenix.org/conference/usenixsecurity24/presentation/xiu",
+    code: "#",
+    bibtex: `@inproceedings{298094,
+  author = {Kedong Xiu and Ding Wang},
+  title = {{PointerGuess}: Targeted Password Guessing Model Using Pointer Mechanism},
+  booktitle = {33rd USENIX Security Symposium (USENIX Security 24)},
+  year = {2024},
+  isbn = {978-1-939133-44-1},
+  address = {Philadelphia, PA},
+  pages = {5555--5572},
+  url = {https://www.usenix.org/conference/usenixsecurity24/presentation/xiu},
+  publisher = {USENIX Association},
+  month = aug
+}`,
+    overview: {
+      summary:
+        "PointerGuess applies a pointer mechanism to targeted password guessing and improves practical hit efficiency.",
+      methodImage: "/images/papers/pub-3-method.png",
+      methodImageAlt: "PointerGuess method overview",
+    },
+  },
+};
+

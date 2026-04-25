@@ -1,0 +1,62 @@
+export const publication = {
+  id: "pub-4",
+  zh: {
+    id: "pub-4",
+    title: "Password Guessing using Random Forest",
+    authors: "Ding Wang*, Yunkai Zou, Zijian Zhang, Kedong Xiu",
+    venue: "USENIX Security 2023",
+    year: 2023,
+    citations: 0,
+    type: "conference",
+    pdf: "https://www.usenix.org/conference/usenixsecurity23/presentation/wang-ding-password-guessing",
+    code: "#",
+    bibtex: `@inproceedings{287117,
+  author = {Ding Wang and Yunkai Zou and Zijian Zhang and Kedong Xiu},
+  title = {Password Guessing Using Random Forest},
+  booktitle = {32nd USENIX Security Symposium (USENIX Security 23)},
+  year = {2023},
+  isbn = {978-1-939133-37-3},
+  address = {Anaheim, CA},
+  pages = {965--982},
+  url = {https://www.usenix.org/conference/usenixsecurity23/presentation/wang-ding-password-guessing},
+  publisher = {USENIX Association},
+  month = aug
+}`,
+    overview: {
+      summary:
+        "该工作探索随机森林在口令猜测任务中的建模能力，分析传统机器学习方法在安全场景中的优势与边界。",
+      methodImage: "/images/papers/pub-4-method.png",
+      methodImageAlt: "Random forest password guessing overview",
+    },
+  },
+  en: {
+    id: "pub-4",
+    title: "Password Guessing using Random Forest",
+    authors: "Ding Wang*, Yunkai Zou, Zijian Zhang, Kedong Xiu",
+    venue: "USENIX Security Symposium 2023",
+    year: 2023,
+    citations: 0,
+    type: "conference",
+    pdf: "https://www.usenix.org/conference/usenixsecurity23/presentation/wang-ding-password-guessing",
+    code: "#",
+    bibtex: `@inproceedings{287117,
+  author = {Ding Wang and Yunkai Zou and Zijian Zhang and Kedong Xiu},
+  title = {Password Guessing Using Random Forest},
+  booktitle = {32nd USENIX Security Symposium (USENIX Security 23)},
+  year = {2023},
+  isbn = {978-1-939133-37-3},
+  address = {Anaheim, CA},
+  pages = {965--982},
+  url = {https://www.usenix.org/conference/usenixsecurity23/presentation/wang-ding-password-guessing},
+  publisher = {USENIX Association},
+  month = aug
+}`,
+    overview: {
+      summary:
+        "This work studies random forests for password guessing and analyzes the strengths and limitations of classical ML approaches.",
+      methodImage: "/images/papers/pub-4-method.png",
+      methodImageAlt: "Random forest password guessing overview",
+    },
+  },
+};
+
