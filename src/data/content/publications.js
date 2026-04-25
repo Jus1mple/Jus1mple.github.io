@@ -31,6 +31,13 @@ export const publicationsContent = {
           type: "preprint",
           pdf: "https://arxiv.org/abs/2510.02422",
           code: "https://github.com/AIsec-ke/Dynamic-Target-Attack",
+          bibtex: `@article{xiu2025dynamic,
+  title={Dynamic Target Attack},
+  author={Kedong Xiu and Churui Zeng and Tianhang Zheng and Xinzhe Huang and Xiaojun Jia and Di Wang and Puning Zhao and Zhan Qin and Kui Ren},
+  journal={arXiv preprint arXiv:2510.02422},
+  year={2025},
+  url={https://arxiv.org/abs/2510.02422}
+}`,
           overview: {
             summary:
               "Dynamic Target Attack（DTA）是一种面向安全对齐大模型的越狱攻击框架，不再优化到固定且低概率的目标响应。DTA 在每轮中从目标模型输出分布采样多个候选响应，选择其中最具危害性的响应作为临时优化目标，并迭代更新对抗后缀。该动态目标机制有效降低了目标与模型输出分布的不匹配，在白盒与黑盒场景下均表现出更高的攻击效果与效率。",
@@ -49,6 +56,13 @@ export const publicationsContent = {
           type: "conference",
           pdf: "https://arxiv.org/abs/2504.18564",
           code: "https://github.com/hxz-sec/DualBreach",
+          bibtex: `@article{huang2025DualBreach,
+  title={DualBreach: Efficient Dual-Jailbreaking via Target-Driven Initialization and Multi-Target Optimization},
+  author={Huang, Xinzhe and Xiu, Kedong and Zheng, Tianhang and Zeng, Churui and Ni, Wangze and Qin, Zhan and Ren, Kui and Chen, Chun},
+  journal={arXiv preprint arXiv:2504.18564},
+  year={2025},
+  url={https://arxiv.org/abs/2504.18564}
+}`,
           overview: {
             summary:
               "DualBreach 面向 dual-jailbreaking 场景，提出目标驱动初始化与多目标联合优化，提高跨目标攻击效率与成功率。",
@@ -67,6 +81,14 @@ export const publicationsContent = {
           type: "conference",
           pdf: "https://arxiv.org/abs/2507.22828",
           code: "https://github.com/Jus1mple/Image2CaptionAttack",
+          bibtex: `@inproceedings{xiu2025caprecover,
+  title={CapRecover: A Cross-Modality Feature Inversion Attack Framework on Vision Language Models},
+  author={Kedong Xiu and Sai Qian Zhang},
+  booktitle={Proceedings of the 33rd ACM International Conference on Multimedia (MM '25)},
+  year={2025},
+  doi={10.1145/3746027.3755203},
+  url={https://doi.org/10.1145/3746027.3755203}
+}`,
           overview: {
             summary:
               "CapRecover 提出跨模态特征反演框架，研究视觉语言模型中的隐私泄露风险，并验证攻击有效性与可扩展性。",
@@ -84,6 +106,18 @@ export const publicationsContent = {
           type: "conference",
           pdf: "https://www.usenix.org/conference/usenixsecurity24/presentation/xiu",
           code: "#",
+          bibtex: `@inproceedings{298094,
+  author = {Kedong Xiu and Ding Wang},
+  title = {{PointerGuess}: Targeted Password Guessing Model Using Pointer Mechanism},
+  booktitle = {33rd USENIX Security Symposium (USENIX Security 24)},
+  year = {2024},
+  isbn = {978-1-939133-44-1},
+  address = {Philadelphia, PA},
+  pages = {5555--5572},
+  url = {https://www.usenix.org/conference/usenixsecurity24/presentation/xiu},
+  publisher = {USENIX Association},
+  month = aug
+}`,
           overview: {
             summary:
               "PointerGuess 利用指针机制进行定向口令猜测，在真实口令分布上实现更高的命中效率与实用性。",
@@ -101,6 +135,18 @@ export const publicationsContent = {
           type: "conference",
           pdf: "https://www.usenix.org/conference/usenixsecurity23/presentation/wang-ding-password-guessing",
           code: "#",
+          bibtex: `@inproceedings{287117,
+  author = {Ding Wang and Yunkai Zou and Zijian Zhang and Kedong Xiu},
+  title = {Password Guessing Using Random Forest},
+  booktitle = {32nd USENIX Security Symposium (USENIX Security 23)},
+  year = {2023},
+  isbn = {978-1-939133-37-3},
+  address = {Anaheim, CA},
+  pages = {965--982},
+  url = {https://www.usenix.org/conference/usenixsecurity23/presentation/wang-ding-password-guessing},
+  publisher = {USENIX Association},
+  month = aug
+}`,
           overview: {
             summary:
               "该工作探索随机森林在口令猜测任务中的建模能力，分析传统机器学习方法在安全场景中的优势与边界。",
@@ -144,6 +190,13 @@ export const publicationsContent = {
           type: "preprint",
           pdf: "https://arxiv.org/abs/2510.02422",
           code: "https://github.com/AIsec-ke/Dynamic-Target-Attack",
+          bibtex: `@article{xiu2025dynamic,
+  title={Dynamic Target Attack},
+  author={Kedong Xiu and Churui Zeng and Tianhang Zheng and Xinzhe Huang and Xiaojun Jia and Di Wang and Puning Zhao and Zhan Qin and Kui Ren},
+  journal={arXiv preprint arXiv:2510.02422},
+  year={2025},
+  url={https://arxiv.org/abs/2510.02422}
+}`,
           overview: {
             summary:
               "Dynamic Target Attack (DTA) is a jailbreak framework that avoids optimizing toward a fixed low-probability target response. In each round, it samples multiple candidate responses from the target model's output distribution, selects the most harmful one as a temporary optimization target, and iteratively updates the adversarial suffix. This adaptive target selection reduces target-distribution mismatch and improves both attack effectiveness and optimization efficiency in white-box and black-box settings.",
@@ -162,6 +215,13 @@ export const publicationsContent = {
           type: "conference",
           pdf: "https://arxiv.org/abs/2504.18564",
           code: "https://github.com/hxz-sec/DualBreach",
+          bibtex: `@article{huang2025DualBreach,
+  title={DualBreach: Efficient Dual-Jailbreaking via Target-Driven Initialization and Multi-Target Optimization},
+  author={Huang, Xinzhe and Xiu, Kedong and Zheng, Tianhang and Zeng, Churui and Ni, Wangze and Qin, Zhan and Ren, Kui and Chen, Chun},
+  journal={arXiv preprint arXiv:2504.18564},
+  year={2025},
+  url={https://arxiv.org/abs/2504.18564}
+}`,
           overview: {
             summary:
               "DualBreach targets dual-jailbreaking with target-driven initialization and multi-target optimization to improve attack efficiency and success rate.",
@@ -180,6 +240,14 @@ export const publicationsContent = {
           type: "conference",
           pdf: "https://arxiv.org/abs/2507.22828",
           code: "https://github.com/Jus1mple/Image2CaptionAttack",
+          bibtex: `@inproceedings{xiu2025caprecover,
+  title={CapRecover: A Cross-Modality Feature Inversion Attack Framework on Vision Language Models},
+  author={Kedong Xiu and Sai Qian Zhang},
+  booktitle={Proceedings of the 33rd ACM International Conference on Multimedia (MM '25)},
+  year={2025},
+  doi={10.1145/3746027.3755203},
+  url={https://doi.org/10.1145/3746027.3755203}
+}`,
           overview: {
             summary:
               "CapRecover introduces a cross-modality feature inversion framework to expose privacy leakage risks in vision-language models.",
@@ -197,6 +265,18 @@ export const publicationsContent = {
           type: "conference",
           pdf: "https://www.usenix.org/conference/usenixsecurity24/presentation/xiu",
           code: "#",
+          bibtex: `@inproceedings{298094,
+  author = {Kedong Xiu and Ding Wang},
+  title = {{PointerGuess}: Targeted Password Guessing Model Using Pointer Mechanism},
+  booktitle = {33rd USENIX Security Symposium (USENIX Security 24)},
+  year = {2024},
+  isbn = {978-1-939133-44-1},
+  address = {Philadelphia, PA},
+  pages = {5555--5572},
+  url = {https://www.usenix.org/conference/usenixsecurity24/presentation/xiu},
+  publisher = {USENIX Association},
+  month = aug
+}`,
           overview: {
             summary:
               "PointerGuess applies a pointer mechanism to targeted password guessing and improves practical hit efficiency.",
@@ -214,6 +294,18 @@ export const publicationsContent = {
           type: "conference",
           pdf: "https://www.usenix.org/conference/usenixsecurity23/presentation/wang-ding-password-guessing",
           code: "#",
+          bibtex: `@inproceedings{287117,
+  author = {Ding Wang and Yunkai Zou and Zijian Zhang and Kedong Xiu},
+  title = {Password Guessing Using Random Forest},
+  booktitle = {32nd USENIX Security Symposium (USENIX Security 23)},
+  year = {2023},
+  isbn = {978-1-939133-37-3},
+  address = {Anaheim, CA},
+  pages = {965--982},
+  url = {https://www.usenix.org/conference/usenixsecurity23/presentation/wang-ding-password-guessing},
+  publisher = {USENIX Association},
+  month = aug
+}`,
           overview: {
             summary:
               "This work studies random forests for password guessing and analyzes the strengths and limitations of classical ML approaches.",
