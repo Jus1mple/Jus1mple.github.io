@@ -3,6 +3,7 @@ import { ChevronDown, ChevronUp, ExternalLink, Github, Quote } from "lucide-reac
 import SectionHeading from "./SectionHeading.jsx";
 import { useLanguage } from "../contexts/LanguageContext.jsx";
 import { cn } from "../lib/utils";
+import PaperOverviewPage from "../pages/PaperOverviewPage.jsx";
 
 function typeBadgeClass(type) {
   if (type === "journal") return "bg-blue-50 text-blue-700";
@@ -113,7 +114,7 @@ function emphasizeName(text, name) {
   return out;
 }
 
-export default function Publications({ onViewDetails }) {
+export default function Publications() {
   const { t, language } = useLanguage();
   const data = t.publications;
   const quickViewLabel = data.labels.quickView || (language === "zh" ? "快速浏览" : "Quick View");
@@ -124,12 +125,18 @@ export default function Publications({ onViewDetails }) {
   const [expandedPaperId, setExpandedPaperId] = useState(null);
   const [brokenImages, setBrokenImages] = useState({});
   const [citePaper, setCitePaper] = useState(null);
+  const [paperModalId, setPaperModalId] = useState(null);
 
   const indexById = useMemo(() => {
     const m = new Map();
     data.list.forEach((p, i) => m.set(p.id, i + 1));
     return m;
   }, [data.list]);
+
+  const modalPublication = useMemo(
+    () => data.list.find((p) => p.id === paperModalId) || null,
+    [data.list, paperModalId],
+  );
 
   return (
     <section id="publications" className="bg-white py-24">
@@ -159,9 +166,13 @@ export default function Publications({ onViewDetails }) {
                         </span>
                       </div>
                       <div className="min-w-0">
-                        <div className="heading text-lg font-semibold leading-snug text-gray-900">
+                        <button
+                          type="button"
+                          onClick={() => setPaperModalId(p.id)}
+                          className="heading text-left text-lg font-semibold leading-snug text-gray-900 hover:text-blue-800"
+                        >
                           {p.title}
-                        </div>
+                        </button>
                         <div className="mt-2 text-base text-gray-600">
                           {emphasizeName(p.authors, "Kedong Xiu")}
                         </div>
@@ -208,30 +219,22 @@ export default function Publications({ onViewDetails }) {
                       ) : null}
                     </div>
 
-                    <div className="flex items-center gap-3 sm:justify-end">
-                      {typeof onViewDetails === "function" ? (
-                        <button
-                          type="button"
-                          onClick={() => onViewDetails(p.id)}
-                          className="inline-flex items-center gap-1 text-xs text-gray-600 hover:text-blue-700"
-                        >
-                          {quickViewLabel}
-                        </button>
-                      ) : null}
-
-                      <button
-                        type="button"
-                        aria-expanded={isExpanded}
-                        onClick={() => setExpandedPaperId(isExpanded ? null : p.id)}
-                        className="inline-flex items-center text-gray-500 hover:text-blue-700"
-                      >
-                        {isExpanded ? (
-                          <ChevronUp className="h-4 w-4" />
-                        ) : (
-                          <ChevronDown className="h-4 w-4" />
-                        )}
-                      </button>
-                    </div>
+                    <a
+                      href="#"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setExpandedPaperId(isExpanded ? null : p.id);
+                      }}
+                      className="inline-flex items-center gap-1 text-sm font-medium text-blue-700 hover:text-blue-800 sm:justify-end"
+                      aria-expanded={isExpanded}
+                    >
+                      {quickViewLabel}
+                      {isExpanded ? (
+                        <ChevronUp className="h-4 w-4" />
+                      ) : (
+                        <ChevronDown className="h-4 w-4" />
+                      )}
+                    </a>
                   </div>
                 </div>
 
@@ -294,6 +297,23 @@ export default function Publications({ onViewDetails }) {
                 {copyLabel}
               </button>
             </div>
+          </div>
+        </div>
+      ) : null}
+
+      {paperModalId ? (
+        <div
+          className="fixed inset-0 z-[70] flex items-center justify-center bg-black/40 px-4"
+          onMouseDown={(e) => {
+            if (e.target === e.currentTarget) setPaperModalId(null);
+          }}
+        >
+          <div className="max-h-[85vh] w-full max-w-4xl overflow-auto border border-gray-200 bg-white shadow-xl">
+            <PaperOverviewPage
+              publication={modalPublication}
+              onBack={() => setPaperModalId(null)}
+              mode="modal"
+            />
           </div>
         </div>
       ) : null}
