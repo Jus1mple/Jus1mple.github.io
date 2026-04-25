@@ -271,9 +271,9 @@ export default function Publications() {
                           return;
                         }
 
-                        // Retry image load when re-opening quick view (covers transient failures / stale broken flags).
+                        // Always retry image load when opening quick view (covers transient failures / odd truthy flags).
                         setBrokenImages((prev) => {
-                          if (!prev[p.id]) return prev;
+                          if (!Object.prototype.hasOwnProperty.call(prev, p.id)) return prev;
                           const next = { ...prev };
                           delete next[p.id];
                           return next;
